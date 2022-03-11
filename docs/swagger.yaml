@@ -1,0 +1,23 @@
+info:
+  contact:
+    email: anzhihe@foxmail.com
+    name: anzhihe
+    url: https://chegva.com
+  description: gin-web-example API接口文档
+  title: 快速初始化gin web项目
+  version: 1.0.1
+paths:
+  /api/v1/test:
+    get:
+      consumes:
+      - application/json
+      description: 测试router访问是否正常
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: router测试接口
+      tags:
+      - Router测试相关接口
+swagger: "2.0"

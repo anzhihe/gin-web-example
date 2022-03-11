@@ -1,0 +1,35 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "gin-web-example API接口文档",
+        "title": "快速初始化gin web项目",
+        "contact": {
+            "name": "anzhihe",
+            "url": "https://chegva.com",
+            "email": "anzhihe@foxmail.com"
+        },
+        "version": "1.0.1"
+    },
+    "paths": {
+        "/api/v1/test": {
+            "get": {
+                "description": "测试router访问是否正常",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Router测试相关接口"
+                ],
+                "summary": "router测试接口",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
