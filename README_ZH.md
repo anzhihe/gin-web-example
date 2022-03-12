@@ -68,7 +68,7 @@ Listening port is 8080
 ## 目录结构
 
 ```bash
-thor-backend
+gin-web-example
 ├── Makefile        // 编译打包
 ├── README.md       // 使用说明
 ├── conf            // 配置文件
