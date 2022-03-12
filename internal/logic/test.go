@@ -1,5 +1,5 @@
 package logic
 
-func (l *Logic) GetServeTest() string {
+func (l *Logic) ServeTest() string {
 	return "route测试成功！"
 }

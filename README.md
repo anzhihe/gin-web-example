@@ -55,7 +55,7 @@ Project information and existing API
 
 [GIN-debug] GET    /health                   --> thor-backend/internal/controller.(*Server).health-fm (3 handlers)
 [GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
-[GIN-debug] GET    /api/v1/test              --> thor-backend/internal/controller.(*Server).GetServeTest-fm (3 handlers)
+[GIN-debug] GET    /api/v1/test              --> thor-backend/internal/controller.(*Server).ServeTest-fm (3 handlers)
 [GIN-debug] GET    /debug/pprof/             --> github.com/gin-contrib/pprof.pprofHandler.func1 (3 handlers)
 ......
 Listening port is 8080
