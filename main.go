@@ -19,7 +19,7 @@ func main() {
 	setting.Init()
 	// 加载数据库
 	d := dao.Init()
-	// 加载逻辑层
+	// 加载应用
 	l := logic.Init(d)
 	// 启动服务
 	s := controller.Init(l)

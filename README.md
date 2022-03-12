@@ -1,6 +1,6 @@
 ## Gin Web Example
 
-An example of gin web project, using Gin、Gorm、MySQL、Redis etc.
+An example of gin web project, using Gin、Gorm、MySQL、Redis etc
 
 [简体中文](./README_ZH.md) | English
 
@@ -75,11 +75,11 @@ thor-backend
 │   ├── config.dev.toml
 │   ├── config.online.toml
 │   └── config.pre.toml
-├── docs            // 文档目录
+├── docs            // 相关文档
 ├── internal    
-│   ├── controller  // 路由入口
+│   ├── controller  // 控制入口
 │   ├── dao         // 数据操作
-│   ├── logger      // 日志封装
+│   ├── logger      // 日志加载
 │   ├── logic       // 业务逻辑
 │   ├── middleware  // 中间件层
 │   ├── model       // 模型定义
