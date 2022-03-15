@@ -39,8 +39,7 @@ pool_size = 100
 
 ## Run
 
-Specify the configuration file `go run main.go -c conf/config.dev.toml`
-run the `air` command to live reload for server，useful for development and debugging
+Specify the configuration file `go run main.go -c conf/config.dev.toml`，or run the `air` command to live reload for server，useful for development and debugging
 
 ```bash
 $ git clone https://github.com/anzhihe/gin-web-example.git
