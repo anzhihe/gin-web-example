@@ -20,7 +20,6 @@ func Init() {
 	// &confPath 接收用户命令行中输入的 -c 后面的参数值指定配置文件，"./conf/config.dev.toml" 默认配置文件路径
 	flag.StringVar(&confPath, "c", "./conf/config.dev.toml", "need config file.eg: thor -c ./conf/config.[dev|pre|online].toml")
 	flag.Parse()
-	//pp.Println(confPath)
 
 	// 读取配置信息
 	viper.SetConfigFile(confPath)
@@ -50,6 +49,7 @@ func Init() {
 // 配置文件结构体
 type Config struct {
 	*RunConfig `mapstructure:"run"`
+	*AppConfig `mapstructure:"app"`
 	*LogConfig `mapstructure:"log"`
 	ODB        *DBConfig    `mapstructure:"odb"` // 作业平台数据库
 	IDB        *DBConfig    `mapstructure:"idb"` // 巡检平台数据库
@@ -63,6 +63,15 @@ type RunConfig struct {
 	Port    int    `mapstructure:"port"`
 	Env     string `mapstructure:"env"`
 	Version string `mapstructure:"version"`
+}
+
+// 应用配置
+type AppConfig struct {
+	DefaultPageSize   int    `mapstructure:"default_page_size"`
+	MaxPageSize       int    `mapstructure:"max_page_size"`
+	UploadSavePath    string `mapstructure:"upload_save_path"`
+	UploadServerUrl   string `mapstructure:"upload_server_url"`
+	UploadFileMaxSize string `mapstructure:"upload_file_max_size"`
 }
 
 // 数据库配置
@@ -82,10 +91,10 @@ type RedisConfig struct {
 // 日志配置
 type LogConfig struct {
 	Level      string `mapstructure:"level"`
-	AccessLog    string `mapstructure:"access_log"`
-	ErrorLog    string `mapstructure:"error_log"`
+	AccessLog  string `mapstructure:"access_log"`
+	ErrorLog   string `mapstructure:"error_log"`
 	MaxSize    int    `mapstructure:"max_size"`
 	MaxAge     int    `mapstructure:"max_age"`
 	MaxBackups int    `mapstructure:"max_backups"`
-	Compress bool `mapstructure:"compress"`
+	Compress   bool   `mapstructure:"compress"`
 }

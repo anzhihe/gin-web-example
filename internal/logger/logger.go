@@ -8,7 +8,7 @@ import (
 	"runtime/debug"
 	"strings"
 	"thor-backend/internal/setting"
-	"thor-backend/pkg"
+	log "thor-backend/pkg"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -28,16 +28,16 @@ func Init(cfg *setting.LogConfig, mode string) (err error) {
 	var tops = []log.TeeOption{
 		{
 			Filename: cfg.AccessLog,
-			Mode: mode,
-			Ropt: logRotate,
+			Mode:     mode,
+			Ropt:     logRotate,
 			Lef: func(lvl log.Level) bool {
 				return lvl <= log.InfoLevel
 			},
 		},
 		{
 			Filename: cfg.ErrorLog,
-			Mode: mode,
-			Ropt: logRotate,
+			Mode:     mode,
+			Ropt:     logRotate,
 			Lef: func(lvl log.Level) bool {
 				return lvl > log.InfoLevel
 			},
@@ -49,8 +49,8 @@ func Init(cfg *setting.LogConfig, mode string) (err error) {
 	defer log.Sync()
 
 	log.Info("init logger success.")
-	return
 
+	return
 }
 
 // GinLogger 接收gin框架默认日志

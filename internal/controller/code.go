@@ -10,7 +10,7 @@ const (
 	CodeDeleted ResCode = 204
 
 	CodeInvalidParam ResCode = 400
-	CodeUNAuthorized ResCode = 401
+	CodeUnAuthorized ResCode = 401
 	CodeForbidden    ResCode = 403
 	CodeNotFound     ResCode = 404
 	CodeInvalidToken ResCode = 419
@@ -23,7 +23,7 @@ var codeMsgMap = map[ResCode]string{
 	CodeCreated:      "创建成功",
 	CodeDeleted:      "删除成功",
 	CodeInvalidParam: "请求参数错误",
-	CodeUNAuthorized: "未授权",
+	CodeUnAuthorized: "未授权",
 	CodeForbidden:    "禁止访问",
 	CodeNotFound:     "请求资源不存在",
 	CodeInvalidToken: "无效的token",

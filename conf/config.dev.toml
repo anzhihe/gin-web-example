@@ -4,6 +4,13 @@ port = 8080
 env = "dev"
 version = "v1.0.1"
 
+[app]
+default_page_size = 10
+max_page_size = 100
+upload_save_path = "/files"
+upload_server_url = "http://127.0.0.1/resource"
+upload_file_max_size = 20 # MB
+
 [log]
 access_log = "./log/access.log"
 error_log = "./log/error.log"
