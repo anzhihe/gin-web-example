@@ -18,7 +18,7 @@ func (s *Server) initRouter(e *gin.Engine) {
 
 	v1 := e.Group("/api/v1")
 	{
-		// router测试接口
+		// 测试接口
 		v1.GET("/test", s.ServeTest)
 	}
 

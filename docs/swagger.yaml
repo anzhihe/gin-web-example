@@ -4,19 +4,41 @@ info:
     name: anzhihe
     url: https://chegva.com
   description: gin-web-example API接口文档
+  termsOfService: https://github.com/anzhihe/gin-web-example
   title: 快速初始化gin web项目
   version: 1.0.1
 paths:
   /api/v1/test:
     get:
-      consumes:
-      - application/json
       description: 测试router访问是否正常
+      parameters:
+      - description: 测试名称
+        in: body
+        maxLength: 100
+        minLength: 3
+        name: name
+        required: true
+        schema:
+          type: string
+      - description: 页码
+        in: query
+        name: page
+        type: integer
+      - description: 每页数量
+        in: query
+        name: page_size
+        type: integer
       produces:
       - application/json
       responses:
         "200":
-          description: ""
+          description: 请求成功
+          schema:
+            type: string
+        "400":
+          description: 请求错误
+        "500":
+          description: 内部繁忙
       summary: router测试接口
       tags:
       - Router测试相关接口

@@ -10,6 +10,7 @@ import (
 // @title 快速初始化gin web项目
 // @version 1.0.1
 // @description gin-web-example API接口文档
+// @termsOfService https://github.com/anzhihe/gin-web-example
 // @contact.name anzhihe
 // @contact.url https://chegva.com
 // @contact.email anzhihe@foxmail.com

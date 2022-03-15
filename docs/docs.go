@@ -10,6 +10,7 @@ const docTemplate = `{
     "info": {
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
+        "termsOfService": "https://github.com/anzhihe/gin-web-example",
         "contact": {
             "name": "anzhihe",
             "url": "https://chegva.com",
@@ -23,9 +24,6 @@ const docTemplate = `{
         "/api/v1/test": {
             "get": {
                 "description": "测试router访问是否正常",
-                "consumes": [
-                    "application/json"
-                ],
                 "produces": [
                     "application/json"
                 ],
@@ -33,9 +31,43 @@ const docTemplate = `{
                     "Router测试相关接口"
                 ],
                 "summary": "router测试接口",
+                "parameters": [
+                    {
+                        "maxLength": 100,
+                        "minLength": 3,
+                        "description": "测试名称",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "description": "页码",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "每页数量",
+                        "name": "page_size",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "请求成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "请求错误"
+                    },
+                    "500": {
+                        "description": "内部繁忙"
                     }
                 }
             }
