@@ -40,7 +40,9 @@ pool_size = 100
 ## 运行
 
 使用指定配置文件运行服务 `go run main.go -c conf/config.dev.toml`
-```
+或者执行 `air` 命令支持热重启服务，便于开发调试
+
+```bash
 $ git clone https://github.com/anzhihe/gin-web-example.git
 
 $ cd gin-web-example
