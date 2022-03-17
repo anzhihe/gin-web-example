@@ -2,6 +2,7 @@ package controller
 
 import (
 	_ "thor-backend/docs" // 导入swag生成的docs
+	"thor-backend/pkg/app"
 
 	gs "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
@@ -23,7 +24,7 @@ func (s *Server) initRouter(e *gin.Engine) {
 	}
 
 	e.NoRoute(func(c *gin.Context) {
-		ResponseError(c, CodeNotFound)
+		app.ResponseError(c, app.CodeNotFound)
 	})
 
 }

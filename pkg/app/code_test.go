@@ -1,10 +1,9 @@
-package controller
+package app
 
 import (
 	"fmt"
 	"testing"
 	"thor-backend/internal/logger"
-
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )

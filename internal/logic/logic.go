@@ -5,7 +5,7 @@ import (
 	"thor-backend/internal/dao"
 	"thor-backend/internal/logger"
 	"thor-backend/internal/setting"
-	log "thor-backend/pkg"
+	"thor-backend/pkg/log"
 
 	"github.com/go-playground/validator/v10"
 )

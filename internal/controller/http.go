@@ -10,7 +10,8 @@ import (
 	"thor-backend/internal/logger"
 	"thor-backend/internal/logic"
 	"thor-backend/internal/setting"
-	log "thor-backend/pkg"
+	"thor-backend/pkg/app"
+	"thor-backend/pkg/log"
 	"time"
 
 	"go.uber.org/zap"
@@ -91,7 +92,7 @@ func GracefulShutdown(s *Server) {
 }
 
 func (s *Server) health(c *gin.Context) {
-	ResponseSuccess(c, "服务正常")
+	app.ResponseSuccess(c, "服务正常")
 }
 
 // Gin Mode设置

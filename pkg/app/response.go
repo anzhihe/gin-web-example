@@ -1,9 +1,8 @@
-package controller
+package app
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 // 返回数据定义

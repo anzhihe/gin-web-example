@@ -1,7 +1,8 @@
 package controller
 
 import (
-	log "thor-backend/pkg"
+	"thor-backend/pkg/app"
+	"thor-backend/pkg/log"
 
 	"github.com/gin-gonic/gin"
 )
@@ -27,5 +28,5 @@ func (s *Server) ServeTest(c *gin.Context) {
 	// 返回响应
 	//ResponseSuccess(c, data)
 
-	ResponseList(c, data, count) // 返回分页数据
+	app.ResponseList(c, data, count) // 返回分页数据
 }
