@@ -22,21 +22,21 @@ compress = true # 是否压缩/归档旧文件
 
 # 作业平台数据库
 [odb]
-addr="root:rootroot@tcp(127.0.0.1:3306)/ordin?charset=utf8&parseTime=True&loc=Asia%2FShanghai"
+addr="root:rootroot@tcp(127.0.0.1:3306)/ordin?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
 max_open_conns = 16
 max_idle_conns = 4
 debug = true
 
 # 巡检平台数据库
 [idb]
-addr="root:rootroot@tcp(127.0.0.1:3306)/inspection?charset=utf8&parseTime=True&loc=Asia%2FShanghai"
+addr="root:rootroot@tcp(127.0.0.1:3306)/inspection?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
 max_open_conns = 16
 max_idle_conns = 4
 debug = true
 
 # 预警平台数据库
 [rdb]
-addr="root:rootroot@tcp(127.0.0.1:3306)/risk?charset=utf8&parseTime=True&loc=Asia%2FShanghai"
+addr="root:rootroot@tcp(127.0.0.1:3306)/risk?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
 max_open_conns = 16
 max_idle_conns = 4
 debug = true
